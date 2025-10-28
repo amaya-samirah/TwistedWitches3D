@@ -225,3 +225,11 @@ Unloading 4634 unused Assets / (0.8 MB). Loaded Objects now: 5094.
 Memory consumption went from 84.3 MB to 83.4 MB.
 Total: 7.140042 ms (FindLiveObjects: 0.462916 ms CreateObjectMapping: 0.103334 ms MarkObjects: 6.054541 ms  DeleteObjects: 0.518958 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 108824.926322 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a3cec3c880bab9f72c6adf9ca6f592e5') in 0.032614167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+

@@ -233,3 +233,115 @@ Received Import Request.
 Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '21fbfa32db369f210a9c293899a810f9') in 0.002543 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
+========================================================================
+Received Import Request.
+  Time since last request: 320.717804 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(d3170786b64be43918a9efc539d3bef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(d3170786b64be43918a9efc539d3bef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c27c468b60ff2ad3f2de7452276e26bb') in 0.000262959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.687234 seconds.
+  path: Assets/Resources/BillingMode.json
+  artifactKey: Guid(adabc7c8d20f74f3da7f174d3a127068) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Resources/BillingMode.json using Guid(adabc7c8d20f74f3da7f174d3a127068) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '854e95b8b97ed52fd5f0604fe9c8686e') in 0.03205875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.756148 seconds.
+  path: Assets/Scenes/StartMenu.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/StartMenu.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '59ba7aa3e7130af0b9ad30d8284b0900') in 0.000352166 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.983596 seconds.
+  path: Assets/Scenes/StartMenu.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/StartMenu.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6e283fef18979e672c0276f06fb27132') in 0.002702791 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.532093 seconds.
+  path: Assets/Scenes/Home.unity
+  artifactKey: Guid(71f679dcb3f8a457fb51521b30795ae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Home.unity using Guid(71f679dcb3f8a457fb51521b30795ae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4e551850ae14e8f5225a6b576d28551e') in 0.000366417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.984082 seconds.
+  path: Assets/Scenes/Home.unity
+  artifactKey: Guid(71f679dcb3f8a457fb51521b30795ae9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/Home.unity using Guid(71f679dcb3f8a457fb51521b30795ae9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7af07fff5ec56651a134b8e7ff0b3909') in 0.002417208 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.355417 seconds.
+  path: Assets/Scenes/HomeLot.unity
+  artifactKey: Guid(c72d6c643dfdb4b61b421a0272095217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/HomeLot.unity using Guid(c72d6c643dfdb4b61b421a0272095217) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4728a9e8d6710a2c0647d524a50ff18d') in 0.000389459 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.088666 seconds.
+  path: Assets/Scenes/HomeLot.unity
+  artifactKey: Guid(c72d6c643dfdb4b61b421a0272095217) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/HomeLot.unity using Guid(c72d6c643dfdb4b61b421a0272095217) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '90e770692ec440a58686462bd189c947') in 0.003113 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.233336 seconds.
+  path: Assets/Scenes/HomeLot 1.unity
+  artifactKey: Guid(3c0c29d6e30de4e77bd3ee1b6bbd9f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/HomeLot 1.unity using Guid(3c0c29d6e30de4e77bd3ee1b6bbd9f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7a50546d4ca4722bb8cb97babc1ddc8a') in 0.00029425 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.986337 seconds.
+  path: Assets/Scenes/HomeLot 1.unity
+  artifactKey: Guid(3c0c29d6e30de4e77bd3ee1b6bbd9f38) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/HomeLot 1.unity using Guid(3c0c29d6e30de4e77bd3ee1b6bbd9f38) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '573f36b438263b61d5c36bc9fe104470') in 0.003005208 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.081499 seconds.
+  path: Assets/Scenes/Town.unity
+  artifactKey: Guid(3c0c29d6e30de4e77bd3ee1b6bbd9f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Town.unity using Guid(3c0c29d6e30de4e77bd3ee1b6bbd9f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1db277357aec9a3a3c10e4faf6c1f29e') in 0.000241208 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.981116 seconds.
+  path: Assets/Scenes/Town.unity
+  artifactKey: Guid(3c0c29d6e30de4e77bd3ee1b6bbd9f38) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/Town.unity using Guid(3c0c29d6e30de4e77bd3ee1b6bbd9f38) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e9c49148f943de33fb33fee42803a362') in 0.00249025 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.314961 seconds.
+  path: Assets/Scenes/DarkForest.unity
+  artifactKey: Guid(0cd9321662fc144a5b6355ec30a66148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/DarkForest.unity using Guid(0cd9321662fc144a5b6355ec30a66148) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dbd62a7b1213c52552329cfc227871fa') in 0.000331417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.984827 seconds.
+  path: Assets/Scenes/DarkForest.unity
+  artifactKey: Guid(0cd9321662fc144a5b6355ec30a66148) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/DarkForest.unity using Guid(0cd9321662fc144a5b6355ec30a66148) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e5b5d61bcade354a5790c360a5740aff') in 0.002356125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
