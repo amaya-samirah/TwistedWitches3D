@@ -438,6 +438,8 @@
 -analyzer:"/Applications/Unity/Hub/Editor/6000.2.6f2/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/6000.2.6f2/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Fonts/Script/scriptTexttest.cs"
+"Assets/Scripts/MenuMusicManager.cs"
+"Assets/Scripts/MusicLibrary.cs"
 "Assets/Scripts/StartMenu.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
