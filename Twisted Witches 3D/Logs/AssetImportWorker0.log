@@ -2971,3 +2971,35 @@ Received Import Request.
 Start importing Assets/Scenes/Town.unity using Guid(3c0c29d6e30de4e77bd3ee1b6bbd9f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bb277839376d9e987e25e2f6b1294592') in 0.000392208 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
+========================================================================
+Received Import Request.
+  Time since last request: 203.644630 seconds.
+  path: Assets/Fonts/UIsprite/JazzCreateFontUI1024x512.png
+  artifactKey: Guid(d61d12d2d79f7244e9f4de798743e099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/UIsprite/JazzCreateFontUI1024x512.png using Guid(d61d12d2d79f7244e9f4de798743e099) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '33fe08044d3d676df2104a061bcb1f59') in 0.06128275 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 83.466577 seconds.
+  path: Assets/Scenes/HomeLot.unity
+  artifactKey: Guid(c72d6c643dfdb4b61b421a0272095217) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/HomeLot.unity using Guid(c72d6c643dfdb4b61b421a0272095217) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0d1835e97be08c3e442307b58559f09c') in 0.003445209 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 94.612350 seconds.
+  path: Assets/Scenes/HomeLot.unity
+  artifactKey: Guid(c72d6c643dfdb4b61b421a0272095217) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/HomeLot.unity using Guid(c72d6c643dfdb4b61b421a0272095217) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '615a1f9d5daddea8fd7cee8912f9ea31') in 0.004322458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.270447 seconds.
+  path: Assets/Scenes/HomeLot.unity
+  artifactKey: Guid(c72d6c643dfdb4b61b421a0272095217) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/HomeLot.unity using Guid(c72d6c643dfdb4b61b421a0272095217) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5bbaf20c953d4bf7b77630a9cfa4e049') in 0.002073042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
