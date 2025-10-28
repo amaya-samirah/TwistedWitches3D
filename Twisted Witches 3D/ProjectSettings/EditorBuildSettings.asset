@@ -4,5 +4,21 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/HomeLot.unity
+    guid: c72d6c643dfdb4b61b421a0272095217
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 71f679dcb3f8a457fb51521b30795ae9
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: 3c0c29d6e30de4e77bd3ee1b6bbd9f38
+  - enabled: 1
+    path: Assets/Scenes/DarkForest.unity
+    guid: 0cd9321662fc144a5b6355ec30a66148
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
