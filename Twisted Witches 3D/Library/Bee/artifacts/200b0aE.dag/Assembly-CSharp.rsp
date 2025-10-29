@@ -444,6 +444,8 @@
 "Assets/Scripts/MenuMusicManager.cs"
 "Assets/Scripts/MusicLibrary.cs"
 "Assets/Scripts/Slot.cs"
+"Assets/Scripts/SoundEffectLibrary.cs"
+"Assets/Scripts/SoundEffectManager.cs"
 "Assets/Scripts/StartMenu.cs"
 "Assets/Scripts/TabController.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
