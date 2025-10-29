@@ -438,6 +438,8 @@
 -analyzer:"/Applications/Unity/Hub/Editor/6000.2.6f2/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/6000.2.6f2/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Fonts/Script/scriptTexttest.cs"
+"Assets/Scripts/DayStats.cs"
+"Assets/Scripts/DayStatsController.cs"
 "Assets/Scripts/GameMusicManager.cs"
 "Assets/Scripts/HotbarController.cs"
 "Assets/Scripts/InventoryController.cs"

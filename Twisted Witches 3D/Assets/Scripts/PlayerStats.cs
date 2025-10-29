@@ -92,7 +92,7 @@ public class PlayerStats : MonoBehaviour
     }
 
     // Increase energy
-    public void IncreaseCurrMagicenergy(float amount = 1)
+    public void IncreaseCurrMagicEnergy(float amount = 1)
     {
         float newEngergy = currMagicEnergy + amount;
 

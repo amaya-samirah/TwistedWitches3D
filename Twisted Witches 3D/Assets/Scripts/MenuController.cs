@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour
     public GameObject menuCanvas;
     public GameObject tabController;
     public GameObject playerStatsController;
+    public GameObject dayStatsController;
 
     private void Awake()
     {
@@ -81,9 +82,9 @@ public class MenuController : MonoBehaviour
     private void Pause(bool menuActiveSelf)
     {
         PauseController.SetPause(menuActiveSelf);  // sets to if menu is open or closed
-        playerStatsController.GetComponent<PlayerStatsController>().DisplayPlayerStats(!menuActiveSelf);
+        if (playerStatsController != null) playerStatsController.GetComponent<PlayerStatsController>().DisplayPlayerStats(!menuActiveSelf);
+        if (dayStatsController != null) dayStatsController.GetComponent<DayStatsController>().DisplayDayStats(!menuActiveSelf);
         //  TODO:
-        // - day stats
         // - cauldron
     }
 }
