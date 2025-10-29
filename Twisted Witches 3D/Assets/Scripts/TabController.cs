@@ -20,6 +20,8 @@ public class TabController : MonoBehaviour
 
     public void ActivateTab(int tab)
     {
+        SoundEffectManager.PlaySFX("Button");  // play button click sound effect
+        
         for (int i = 0; i < pages.Length; i++)
         {
             pages[i].SetActive(false);
