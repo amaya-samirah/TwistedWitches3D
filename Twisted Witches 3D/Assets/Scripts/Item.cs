@@ -89,8 +89,7 @@ public class Item : MonoBehaviour
         switch (ID)
         {
             case 2:  // health potion
-                // TODO:
-                // - increase player health
+                PlayerStats.Instance.IncreaseCurrHealth(10);
                 RemoveItem();
                 break;
             case 4:  // speed potion
@@ -100,18 +99,15 @@ public class Item : MonoBehaviour
                     // - increase player speed 
                    RemoveItem(); 
                 }
-                
                 break;
             case 10:  // magic energy potion
-                // TODO:
-                // - increase player magic energy
+                PlayerStats.Instance.DecreaseCurrMagicEnergy(10);
                 break;
             case 11:  // wand
                 break;
             default:  // food items
                 SoundEffectManager.PlaySFX("Eat");
-                // TODO:
-                // - increase player health
+                PlayerStats.Instance.IncreaseCurrHealth(10);
                 RemoveItem();
                 break;
         }
