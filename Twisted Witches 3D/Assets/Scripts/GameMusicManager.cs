@@ -37,7 +37,7 @@ public class GameMusicManager : MonoBehaviour
 
         if (musicSlider != null)
         {
-            musicSlider.onValueChanged.AddListener(delegate { SetVolume(musicSlider.value); });
+            musicSlider.onValueChanged.AddListener(delegate { SetVolume(musicSlider.value * 0.25f); }); // max volume is 0.25 --> so want to use slider to set to < or = 25
         }
     }
 
