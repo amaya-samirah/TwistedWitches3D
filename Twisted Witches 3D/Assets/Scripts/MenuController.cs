@@ -7,6 +7,7 @@ public class MenuController : MonoBehaviour
 
     public GameObject menuCanvas;
     public GameObject tabController;
+    public GameObject playerStatsController;
 
     private void Awake()
     {
@@ -32,26 +33,44 @@ public class MenuController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Tab))  // player tab
         {
-            // TODO:
-            // - add checking if canvas is active && game paused (--> return)
+            if (!menuCanvas.activeSelf && PauseController.IsGamePaused)
+            {
+                return;  // wont try to pause if already paused
+            }
+
             menuCanvas.SetActive(!menuCanvas.activeSelf);
             tabController.GetComponent<TabController>().ActivateTab(0);
         }
 
         if (Input.GetKeyDown(KeyCode.I))  // inventory tab
         {
+            if (!menuCanvas.activeSelf && PauseController.IsGamePaused)
+            {
+                return;
+            }
+
             menuCanvas.SetActive(!menuCanvas.activeSelf);
             tabController.GetComponent<TabController>().ActivateTab(1);
         }
 
         if (Input.GetKeyDown(KeyCode.Q))  // quests tab
         {
+            if (!menuCanvas.activeSelf && PauseController.IsGamePaused)
+            {
+                return;
+            }
+
             menuCanvas.SetActive(!menuCanvas.activeSelf);
             tabController.GetComponent<TabController>().ActivateTab(2);
         }
 
         if (Input.GetKeyDown(KeyCode.M))  // map tab
         {
+            if (!menuCanvas.activeSelf && PauseController.IsGamePaused)
+            {
+                return;
+            }
+
             menuCanvas.SetActive(!menuCanvas.activeSelf);
             tabController.GetComponent<TabController>().ActivateTab(3);
         }
@@ -61,7 +80,10 @@ public class MenuController : MonoBehaviour
 
     private void Pause(bool menuActiveSelf)
     {
-        // TODO:
-        // - implement openeing menu pases game
+        PauseController.SetPause(menuActiveSelf);  // sets to if menu is open or closed
+        playerStatsController.GetComponent<PlayerStatsController>().DisplayPlayerStats(!menuActiveSelf);
+        //  TODO:
+        // - day stats
+        // - cauldron
     }
 }

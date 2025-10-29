@@ -4089,6 +4089,7 @@ GameObject:
   - component: {fileID: 1321504409}
   - component: {fileID: 1321504410}
   - component: {fileID: 1321504411}
+  - component: {fileID: 1321504412}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -4142,6 +4143,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f441af9990711489c9b005c18113ad43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HotbarController
+--- !u!114 &1321504412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321504408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c0f82cb9b9541729124c320d756c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1356626864
 GameObject:
   m_ObjectHideFlags: 0
@@ -6082,6 +6095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   menuCanvas: {fileID: 114423680}
   tabController: {fileID: 371106976}
+  playerStatsController: {fileID: 0}
 --- !u!1 &2022661777
 GameObject:
   m_ObjectHideFlags: 0
