@@ -10,6 +10,7 @@ public class InventoryController : MonoBehaviour
     public static InventoryController Instance { get; private set; }
 
     public GameObject itemDictionaryObject;
+    public GameObject hotbarControllerObject;
     public GameObject inventoryPanel;
     public GameObject slotPrefab;
     public int slotCount;
@@ -35,18 +36,33 @@ public class InventoryController : MonoBehaviour
     {
         if (itemDictionaryObject != null) itemDictionary = itemDictionaryObject.GetComponent<ItemDictionary>();
         // add hotbar script to gamecontroller
-        hotbarController = GetComponentInParent<HotbarController>();
+        hotbarController = hotbarControllerObject.GetComponent<HotbarController>();
 
         // Build item counts
+        RebuildItemCounts();
     }
 
     public void RebuildItemCounts()
     {
         itemsCountCache.Clear();
 
-        // TODO:
-        // - check hotbar
+        // Check hotbar
+        foreach (Transform slotTransform in hotbarController.hotbarPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot.currentItem != null)
+            {
+                Item item = slot.currentItem.GetComponent<Item>();
 
+                if (item != null)
+                {
+                    // Adding this item's quantity to any existing one inside cache
+                    itemsCountCache[item.ID] = itemsCountCache.GetValueOrDefault(item.ID, 0) + item.quantity;
+                }
+            }
+        }
+
+        // Check inventory
         foreach (Transform slotTransform in inventoryPanel.transform)
         {
             Slot slot = slotTransform.GetComponent<Slot>();
@@ -73,8 +89,25 @@ public class InventoryController : MonoBehaviour
         Item itemToAdd = itemPrefab.GetComponent<Item>();
         if (itemToAdd == null) return false;
 
-        // TODO:
-        // - check hotbar 1st
+        // Check hotbar
+        // Look for slot with same item
+        foreach (Transform slotTransform in hotbarController.hotbarPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot != null && slot.currentItem != null)
+            {
+                Item slotItem = slot.currentItem.GetComponent<Item>();
+                if (slotItem != null && slotItem.ID == itemToAdd.ID)
+                {
+                    // Stack
+                    slotItem.AddToStack();
+
+                    RebuildItemCounts();
+
+                    return true;
+                }
+            }
+        }
 
         // Check inventory
         foreach (Transform slotTransform in inventoryPanel.transform)  // for every slot inside inventory panel
@@ -96,8 +129,23 @@ public class InventoryController : MonoBehaviour
             }
         }
 
-        // TODO:
-        // - add to hotbar 1st
+        // Add items to hotbar 1st if available slot
+        foreach (Transform slotTransform in hotbarController.hotbarPanel.transform)  // for every slot inside inventory panel
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot != null && slot.currentItem == null)
+            {
+                GameObject newItem = Instantiate(itemPrefab, slotTransform);
+                newItem.transform.localScale = new Vector3(0.5f, 0.5f, 1);  // make item look smaller in slot
+                newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
+                slot.currentItem = newItem;
+                Debug.Log("Added to hotbar.");
+
+                RebuildItemCounts();
+                return true;
+            }
+        }
 
         // Look for empty slot in inventory
         foreach (Transform slotTransform in inventoryPanel.transform)  // for every slot inside inventory panel
@@ -115,6 +163,7 @@ public class InventoryController : MonoBehaviour
             }
         }
 
+        Debug.Log("Inventory is full.");
         return false;  // not added
     }
 
@@ -187,8 +236,26 @@ public class InventoryController : MonoBehaviour
     // To remove item from inventory
     public void RemoveItems(int itemID, int amount)
     {
-        // TODO:
-        // -check hotbar
+        // Check hotbar
+        foreach (Transform slotTransform in hotbarController.hotbarPanel.transform)
+        {
+            if (amount <= 0) break;
+
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot?.currentItem?.GetComponent<Item>() is Item item && item.ID == itemID)  // if item isn't null grab it and check if ID matches
+            {
+                int removed = Mathf.Min(amount, item.quantity);
+                item.RemoveFromStack(removed);
+                amount -= removed;
+
+                // Destory if all items removed
+                if (item.quantity == 0)
+                {
+                    Destroy(slot.currentItem);
+                    slot.currentItem = null;
+                }
+            }
+        }
         
         // Check inventory
         foreach (Transform slotTransform in inventoryPanel.transform)

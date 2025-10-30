@@ -98,6 +98,16 @@
       "source": "registry",
       "testable": false
     },
+    "com.unity.inputsystem@1.14.2": {
+      "name": "com.unity.inputsystem",
+      "displayName": "Input System",
+      "resolvedPath": "/Users/Miyah_Queen645/Documents/GitHub/TwistedWitches3D/Twisted Witches 3D/Library/PackageCache/com.unity.inputsystem@be6c4fd0abf5",
+      "fingerprint": "be6c4fd0abf5b9b45f956b97294032a67f3c2f4d",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "1.14.2",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.multiplayer.center@1.0.0": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
@@ -158,13 +168,13 @@
       "source": "registry",
       "testable": false
     },
-    "com.unity.xr.legacyinputhelpers@2.1.12": {
+    "com.unity.xr.legacyinputhelpers@2.1.13": {
       "name": "com.unity.xr.legacyinputhelpers",
       "displayName": "XR Legacy Input Helpers",
-      "resolvedPath": "/Users/Miyah_Queen645/Documents/GitHub/TwistedWitches3D/Twisted Witches 3D/Library/PackageCache/com.unity.xr.legacyinputhelpers@b7579e86f3b4",
-      "fingerprint": "b7579e86f3b456c909fda6b875fba7ab1eeb1322",
+      "resolvedPath": "/Users/Miyah_Queen645/Documents/GitHub/TwistedWitches3D/Twisted Witches 3D/Library/PackageCache/com.unity.xr.legacyinputhelpers@9535ff2c27ac",
+      "fingerprint": "9535ff2c27ac3e8dfb63877c36641a1cc1a48c14",
       "editorCompatibility": "2019.4.0a1",
-      "version": "2.1.12",
+      "version": "2.1.13",
       "source": "registry",
       "testable": false
     },
