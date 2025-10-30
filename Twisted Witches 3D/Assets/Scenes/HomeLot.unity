@@ -4348,6 +4348,8 @@ GameObject:
   - component: {fileID: 1321504409}
   - component: {fileID: 1321504410}
   - component: {fileID: 1321504412}
+  - component: {fileID: 1321504413}
+  - component: {fileID: 1321504414}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -4369,6 +4371,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1381066577}
+  - {fileID: 1767286778}
   - {fileID: 1759952397}
   - {fileID: 873968809}
   m_Father: {fileID: 0}
@@ -4401,6 +4404,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07c0f82cb9b9541729124c320d756c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!114 &1321504413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321504408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed612bff40c641c88275ce5aecec471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestController
+  activeQuests: []
+  handInQuestIDs: []
+--- !u!114 &1321504414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321504408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf81a9a06507f4736af0657b65abe0bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
 --- !u!1 &1356626864
@@ -4765,7 +4794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: -0.000038146973}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1422991082
@@ -5941,6 +5970,53 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2a4840cdf66e94457960f08836432f89, type: 3}
   - {fileID: 21300000, guid: a24278eb9e4e246a5861e081a54ceb48, type: 3}
   - {fileID: 21300000, guid: 01137c0a53f314ac4aafca03299f4810, type: 3}
+--- !u!1 &1767286777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767286778}
+  - component: {fileID: 1767286779}
+  m_Layer: 0
+  m_Name: QuestUIController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1767286778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767286777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1321504409}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767286779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767286777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66df6ce77f02f49f0bffebcc83d0a75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  questListContent: {fileID: 1422991081}
+  questEntryPrefab: {fileID: 8055299975890893768, guid: 87f80176c09544f5b9f7c567b6e55705, type: 3}
+  objectiveTextPrefab: {fileID: 3346939917460657075, guid: 2374a0859f9434696a46fe02f82ca11e, type: 3}
 --- !u!1 &1784561634
 GameObject:
   m_ObjectHideFlags: 0
@@ -6208,8 +6284,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 712845351}
   m_HandleRect: {fileID: 712845350}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.99999994
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6591,11 +6667,11 @@ RectTransform:
   m_Children:
   - {fileID: 114423681}
   - {fileID: 615999432}
+  - {fileID: 490553684}
   - {fileID: 992668006}
   - {fileID: 2083518689}
   - {fileID: 1520684129}
   - {fileID: 138188542}
-  - {fileID: 490553684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
