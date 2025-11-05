@@ -29,6 +29,16 @@
       "source": "builtin",
       "testable": false
     },
+    "com.unity.2d.tilemap.extras@5.0.1": {
+      "name": "com.unity.2d.tilemap.extras",
+      "displayName": "2D Tilemap Extras",
+      "resolvedPath": "/Users/Miyah_Queen645/Documents/GitHub/TwistedWitches3D/Twisted Witches 3D/Library/PackageCache/com.unity.2d.tilemap.extras@2338d989ff2a",
+      "fingerprint": "2338d989ff2aec99e03da44e42ae2faf1ebc037d",
+      "editorCompatibility": "6000.2.0a10",
+      "version": "5.0.1",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.ads@4.4.2": {
       "name": "com.unity.ads",
       "displayName": "Advertisement Legacy",
