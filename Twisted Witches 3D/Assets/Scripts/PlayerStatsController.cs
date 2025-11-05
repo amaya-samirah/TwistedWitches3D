@@ -21,6 +21,11 @@ public class PlayerStatsController : MonoBehaviour
         UpdateGoldPanel();
     }
     
+    public void UpdatePlayerPage()
+    {
+        xpLevelText.text = PlayerStats.Instance.GetXPLevel().ToString();
+    }
+
     public void UpdateStatsUI()
     {
         // Health bar
@@ -55,11 +60,6 @@ public class PlayerStatsController : MonoBehaviour
     public void UpdateGoldPanel()
     {
         goldAmountText.text = PlayerStats.Instance.GetGold().ToString();
-    }
-
-    public void UpdatePlayerPage()
-    {
-        xpLevelText.text = PlayerStats.Instance.GetXPLevel().ToString();
     }
 
     // Hide or show player stats

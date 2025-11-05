@@ -464,6 +464,7 @@
 "Assets/Scripts/QuestController.cs"
 "Assets/Scripts/QuestUI.cs"
 "Assets/Scripts/RewardsController.cs"
+"Assets/Scripts/SaveController.cs"
 "Assets/Scripts/Slot.cs"
 "Assets/Scripts/SoundEffectLibrary.cs"
 "Assets/Scripts/SoundEffectManager.cs"
