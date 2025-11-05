@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d367885003d4f2a9c22b7599bb3258, type: 3}
+  m_Name: FoxDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Hodor
+  npcPortrait: {fileID: -1141285476458820233, guid: 64f88ec923adc4b78a642ae534c0d1c3, type: 3}
+  dialogueLines:
+  - Hello!
+  - Something terrible has happend!
+  - A thief has stolen all the items in my shop!
+  - They ran off to the dark forest. It's such a scary place. Will you collect my
+    items for me?
+  - Thank you!
+  - Welcome to my shop!
+  - Goodbye.
+  - Be careful of the creatures in the forest!
+  - Thank you so much!
+  autoProgressLines: 010101010100000000
+  endDialogeLines: 000000000100010101
+  typingSpeed: 0.055
+  voiceSound: {fileID: 8300000, guid: 3185541442f55487bb1ddabb99e5ce13, type: 3}
+  voicePitch: 0.75
+  autoProgressDelay: 1
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - What happend?
+    nextDialogueIndex: 02000000
+    givesQuest: 00
+  - dialogueIndex: 3
+    choices:
+    - Of course!
+    - I can't do that right now.
+    nextDialogueIndex: 0400000006000000
+    givesQuest: 0100
+  - dialogueIndex: 5
+    choices:
+    - I'd like to buy items.
+    - I'd like to sell my items.
+    - Goodbye.
+    nextDialogueIndex: 060000000600000006000000
+    givesQuest: 000000
+  questInProgressIndex: 7
+  questCompletedIndex: 8
+  quest: {fileID: 11400000, guid: 28a887892837044be91199def1e094f0, type: 2}

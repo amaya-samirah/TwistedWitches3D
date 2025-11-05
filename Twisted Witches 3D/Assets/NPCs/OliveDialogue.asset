@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d367885003d4f2a9c22b7599bb3258, type: 3}
+  m_Name: OliveDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Olive
+  npcPortrait: {fileID: 1327522395151423198, guid: 8322687fc004f4a2eb9f89c4bac489f7, type: 3}
+  dialogueLines:
+  - Hey there sugar!
+  autoProgressLines: 00
+  endDialogeLines: 01
+  typingSpeed: 0.055
+  voiceSound: {fileID: 8300000, guid: 3185541442f55487bb1ddabb99e5ce13, type: 3}
+  voicePitch: 0.75
+  autoProgressDelay: 1
+  choices: []
+  questInProgressIndex: 0
+  questCompletedIndex: 0
+  quest: {fileID: 0}

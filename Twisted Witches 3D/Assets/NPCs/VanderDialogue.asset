@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d367885003d4f2a9c22b7599bb3258, type: 3}
+  m_Name: VanderDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Vander
+  npcPortrait: {fileID: 2444985694120102399, guid: e3c0675d532bc4ecf9b10625644d9d5c, type: 3}
+  dialogueLines:
+  - How's it going!
+  - Would you like to purchase a magical item?
+  - See you soon!
+  - Enjoy your new wand.
+  - Great!
+  autoProgressLines: 0101010101
+  endDialogeLines: 0000010101
+  typingSpeed: 0.055
+  voiceSound: {fileID: 8300000, guid: 3185541442f55487bb1ddabb99e5ce13, type: 3}
+  voicePitch: 0.75
+  autoProgressDelay: 1
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - Yes, please.
+    - No, thanks.
+    nextDialogueIndex: 0400000002000000
+    givesQuest: 0100
+  questInProgressIndex: 0
+  questCompletedIndex: 3
+  quest: {fileID: 11400000, guid: b22393f5a7ec544c29f569af8f96b226, type: 2}
