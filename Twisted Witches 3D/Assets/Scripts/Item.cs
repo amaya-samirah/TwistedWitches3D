@@ -95,8 +95,7 @@ public class Item : MonoBehaviour
             case 4:  // speed potion
                 if (playerMovement != null)
                 {
-                   // TODO:
-                    // - increase player speed 
+                    playerMovement.SpeedPotion();
                    RemoveItem(); 
                 }
                 break;

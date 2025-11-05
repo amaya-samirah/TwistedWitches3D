@@ -5,6 +5,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     public Animator animator;
+
+    [SerializeField] private Camera mainCam;
     private bool shift = false;
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
             AnimateMovement(stopMovement);
             return;
         }
-        
+
         // get input in unity through Input class
         float horizontal = Input.GetAxisRaw("Horizontal");  // want to get input from horizontal access
         float vertical = Input.GetAxisRaw("Vertical");
@@ -46,6 +48,17 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += direction * (speed * 2) * Time.deltaTime;
         }
+    }
+
+    private void LateUpdate()
+    {
+        // Get camera position
+        Vector3 cameraPos = mainCam.transform.position;
+        cameraPos.y = transform.position.y;
+
+        // Make sprite face camera
+        transform.LookAt(cameraPos);
+        transform.Rotate(0f, 180f, 0f);
     }
 
     void AnimateMovement(Vector3 direction)
