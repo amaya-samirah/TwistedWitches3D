@@ -503,6 +503,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3198918822847019642, guid: deae3f6474ca34092824612e129fe454, type: 3}
   m_PrefabInstance: {fileID: 53809155}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &63913704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63913705}
+  - component: {fileID: 63913706}
+  - component: {fileID: 63913707}
+  m_Layer: 0
+  m_Name: InteractionDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &63913705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63913704}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1230948921}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &63913706
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63913704}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &63913707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63913704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0377b9d3f80c489fbd6ef6f99ac796e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  interactionIcons:
+  - {fileID: 826533214}
+  animator: {fileID: 0}
 --- !u!1 &110467040
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +771,18 @@ PrefabInstance:
     - target: {fileID: 982754376715130348, guid: 1f2ece220dd404d83b74380c8dd84b79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286733796928871200, guid: 1f2ece220dd404d83b74380c8dd84b79, type: 3}
+      propertyPath: m_Radius
+      value: 0.5037945
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286733796928871200, guid: 1f2ece220dd404d83b74380c8dd84b79, type: 3}
+      propertyPath: m_Center.y
+      value: -0.02583015
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286733796928871200, guid: 1f2ece220dd404d83b74380c8dd84b79, type: 3}
+      propertyPath: m_Center.z
+      value: 0.004504025
       objectReference: {fileID: 0}
     - target: {fileID: 9195795265289675584, guid: 1f2ece220dd404d83b74380c8dd84b79, type: 3}
       propertyPath: m_Name
@@ -3842,6 +3923,11 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &826533214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8510614029105789067, guid: 1f2ece220dd404d83b74380c8dd84b79, type: 3}
+  m_PrefabInstance: {fileID: 115310984}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &873968808
 GameObject:
   m_ObjectHideFlags: 0
@@ -5712,6 +5798,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1856173456}
+  - {fileID: 63913705}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1230948922
@@ -5775,7 +5862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
   m_Actions: {fileID: -944628639613478452, guid: b51447cdbe645488b9eb720a91f83fb0, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -5786,10 +5873,26 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 63913707}
+        m_TargetAssemblyTypeName: InteractionDetector, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ee972443-cad6-4111-bfb3-f037f053f5c1
+    m_ActionName: 'Player/Interact[/Mouse/leftButton,/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: 641d1c83-9ef1-4dfc-bef6-72f9e6d9c693
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1230948926
@@ -10106,6 +10209,6 @@ SceneRoots:
   - {fileID: 2012014193}
   - {fileID: 883581593}
   - {fileID: 1321504409}
+  - {fileID: 115310984}
   - {fileID: 3597263086614861701}
   - {fileID: 2692401296104281525}
-  - {fileID: 115310984}

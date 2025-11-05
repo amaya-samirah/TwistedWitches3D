@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -142,6 +143,26 @@ public class QuestController : MonoBehaviour
         activeQuests = savedQuests ?? new();  // loads or sets new list if null
 
         CheckInventoryForQuests();
+        questUI.UpdateQuestUI();
+    }
+
+    public void CheckTalkNPCObjective(NPC npc)
+    {
+        foreach (QuestProgress quest in activeQuests)
+        {
+            foreach (QuestObjective questObjective in quest.objectives)  // for every object we have
+            {
+                if (questObjective.type != ObjectiveType.TalkNPC) continue;
+
+                if (!int.TryParse(questObjective.objectiveID, out int npcID)) continue;
+
+                if (npc.ID == npcID)
+                {
+                    questObjective.currentAmount++;
+                }
+            }
+        }
+
         questUI.UpdateQuestUI();
     }
 }

@@ -28,6 +28,7 @@ public class DialogueController : MonoBehaviour
     public void ShowDialogueUI(bool show)
     {
         dialoguePanel.SetActive(show);
+        PauseController.SetPause(show);
     }
 
     public void SetNPCInfo(string npcName, Sprite portrait)
