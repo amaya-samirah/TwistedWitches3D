@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (PauseController.IsGamePaused)
         {
-            Debug.Log($"Game paused (PlayerMovement sees IsGamePaused={PauseController.IsGamePaused})");
+            //Debug.Log($"Game paused (PlayerMovement sees IsGamePaused={PauseController.IsGamePaused})");
             Vector3 stopMovement = new Vector3(0, 0, 0);
             AnimateMovement(stopMovement);
             return;

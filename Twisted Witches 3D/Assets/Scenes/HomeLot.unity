@@ -5779,7 +5779,7 @@ GameObject:
   - component: {fileID: 1230948927}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5892,7 +5892,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Interact[/Mouse/leftButton,/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 641d1c83-9ef1-4dfc-bef6-72f9e6d9c693
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1230948926
@@ -6130,7 +6130,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1268497835}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1321504415}
+        m_TargetAssemblyTypeName: SaveController, Assembly-CSharp
+        m_MethodName: SaveGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1268497835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6378,6 +6390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1321504409}
+  - component: {fileID: 1321504415}
   - component: {fileID: 1321504410}
   - component: {fileID: 1321504412}
   - component: {fileID: 1321504413}
@@ -6465,6 +6478,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf81a9a06507f4736af0657b65abe0bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &1321504415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321504408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9209d4e157d70491681749a8bbdb3b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveController
+  inventoryObject: {fileID: 1321504408}
+  hotbarObject: {fileID: 490553683}
+  playerStatsObject: {fileID: 1759952396}
+  dayStatsObject: {fileID: 873968808}
+  chestObjects: []
 --- !u!1001 &1325236567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6609,7 +6639,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1356626867}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1321504415}
+        m_TargetAssemblyTypeName: SaveController, Assembly-CSharp
+        m_MethodName: SaveAndQuit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1356626867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7288,7 +7330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1515284913}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1321504415}
+        m_TargetAssemblyTypeName: SaveController, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1515284913
 MonoBehaviour:
   m_ObjectHideFlags: 0

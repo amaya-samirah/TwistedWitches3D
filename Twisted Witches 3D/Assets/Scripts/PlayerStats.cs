@@ -154,7 +154,7 @@ public class PlayerStats : MonoBehaviour
     }
 
     // To load data when opening scene
-    public void LoadState(int xpLevel, int xpPoints, int currHealth, int currMagicEnergy, int gold, bool canCastSpells)
+    public void LoadState(int xpLevel, int xpPoints, float currHealth, float currMagicEnergy, int gold, bool canCastSpells)
     {
         this.xpLevel = xpLevel;
         this.xpPoints = xpPoints;
