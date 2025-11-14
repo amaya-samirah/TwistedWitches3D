@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EvilClone : MonoBehaviour
 {
+    public int damage = 1;
     public bool inRange = false;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
