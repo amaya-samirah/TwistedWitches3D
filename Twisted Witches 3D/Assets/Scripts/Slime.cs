@@ -7,7 +7,7 @@ public class Slime : MonoBehaviour, IInteractable
     public float chaseSpeed = 0.5f;
     public GameObject itemDrop;
     public GameObject hotbarObject;
-    public int damage = 1;
+    public float damage = 0.5f;  // damage slime deals to player
     public bool inRange = false;
 
     private Animator animator;

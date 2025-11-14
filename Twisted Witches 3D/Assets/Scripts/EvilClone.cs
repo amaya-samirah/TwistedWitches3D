@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class EvilClone : MonoBehaviour
 {
+    public static event Action OnEvilCloneDefeated;
+    
     public int damage = 1;
     public bool inRange = false;
     

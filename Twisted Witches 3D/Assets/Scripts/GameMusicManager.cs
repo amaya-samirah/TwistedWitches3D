@@ -89,4 +89,9 @@ public class GameMusicManager : MonoBehaviour
             musicSlider.onValueChanged.RemoveListener(delegate { SetVolume(musicSlider.value); });
         }
     }
+
+    public void StopMusic()
+    {
+        if (audioSource != null) audioSource.Stop();
+    }
 }
