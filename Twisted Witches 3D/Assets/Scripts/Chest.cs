@@ -6,7 +6,7 @@ public class Chest : MonoBehaviour, IInteractable
     public string ChestID { get; private set; }
     public GameObject itemPrefab;  // item chest drops
     public int itemCount = 1;
-    public Sprite openedSprite;  // when opened switch to open chest sprite
+    public GameObject openTopObject;  // when opened switch to open chest object
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,6 +16,7 @@ public class Chest : MonoBehaviour, IInteractable
 
     public bool CanInteract()
     {
+        Debug.Log($"Chest is open is: {!IsOpened}");
         return !IsOpened;  // if opened chest is empty
     }
 
@@ -36,7 +37,7 @@ public class Chest : MonoBehaviour, IInteractable
         // Drop item
         if (itemPrefab)
         {
-            GameObject droppedItem = Instantiate(itemPrefab, transform.position + Vector3.down, Quaternion.identity);
+            GameObject droppedItem = Instantiate(itemPrefab, transform.position + new Vector3(0, 0.15f, -0.5f), Quaternion.identity);
             droppedItem.GetComponent<BounceEffect>().StartBounce();
         }
     }
@@ -45,7 +46,14 @@ public class Chest : MonoBehaviour, IInteractable
     {
         if (IsOpened = opened)  // sets IsOpened then checks value
         {
-            GetComponent<SpriteRenderer>().sprite = openedSprite;  // might have to change later for 3D
+            GameObject closedTop = transform.GetChild(1).gameObject;
+
+            if (closedTop != null && openTopObject != null)
+            {
+                var openTop = Instantiate(openTopObject, closedTop.transform.parent);
+
+                Destroy(closedTop);
+            }
         }
     }
 }

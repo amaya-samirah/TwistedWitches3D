@@ -102,6 +102,7 @@ public class InteractionDetector : MonoBehaviour
         }
         else
         {
+            Debug.Log("In range of other");
             if (collision.CompareTag("NPC"))
             {
                 objectTag = "NPC";
