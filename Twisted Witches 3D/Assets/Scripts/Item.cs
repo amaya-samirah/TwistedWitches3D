@@ -23,6 +23,7 @@ public class Item : MonoBehaviour
     public bool removeAfter;
     public bool hasDuration;
     public float duration = 0;
+    public Sprite itemIcon;
     public GameObject player;  // use to access player movement script without use
 
     private TMP_Text quantityText;
@@ -115,9 +116,7 @@ public class Item : MonoBehaviour
     // When item gets picked up
     public virtual void ShowPopup()  // may have some items have different pickup later
     {
-        Sprite itemIcon = GetComponent<Image>().sprite;
-
-        if (ItemPickUpUIController.Instance != null)
+        if (ItemPickUpUIController.Instance != null && itemIcon != null)
         {
             ItemPickUpUIController.Instance.ShowItemPickUp(Name, itemIcon);
         }

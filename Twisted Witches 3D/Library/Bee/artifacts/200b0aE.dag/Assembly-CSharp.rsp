@@ -469,6 +469,7 @@
 "Assets/Scripts/InventorySaveData.cs"
 "Assets/Scripts/Item.cs"
 "Assets/Scripts/ItemDictionary.cs"
+"Assets/Scripts/ItemDragHandler.cs"
 "Assets/Scripts/ItemPickUpUIController.cs"
 "Assets/Scripts/MenuController.cs"
 "Assets/Scripts/MenuMusicManager.cs"

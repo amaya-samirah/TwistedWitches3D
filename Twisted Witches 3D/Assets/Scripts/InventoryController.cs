@@ -84,9 +84,11 @@ public class InventoryController : MonoBehaviour
 
     public Dictionary<int, int> GetItemCounts() => itemsCountCache;
 
-    public bool AddItem(GameObject itemPrefab)
+    public bool AddItem(GameObject itemPrefab3D)
     {
-        Item itemToAdd = itemPrefab.GetComponent<Item>();
+        int itemID = itemPrefab3D.GetComponent<Item>().ID;
+        Item itemToAdd = itemDictionary.GetItemPrefab(itemID).GetComponent<Item>();
+        GameObject itemPrefab2D = itemDictionary.GetItemPrefab(itemID);
         if (itemToAdd == null) return false;
 
         // Check hotbar
@@ -135,7 +137,7 @@ public class InventoryController : MonoBehaviour
             Slot slot = slotTransform.GetComponent<Slot>();
             if (slot != null && slot.currentItem == null)
             {
-                GameObject newItem = Instantiate(itemPrefab, slotTransform);
+                GameObject newItem = Instantiate(itemPrefab2D, slotTransform);
                 newItem.transform.localScale = new Vector3(0.5f, 0.5f, 1);  // make item look smaller in slot
                 newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
@@ -153,7 +155,7 @@ public class InventoryController : MonoBehaviour
             Slot slot = slotTransform.GetComponent<Slot>();
             if (slot != null && slot.currentItem == null)
             {
-                GameObject newItem = Instantiate(itemPrefab, slotTransform);
+                GameObject newItem = Instantiate(itemPrefab2D, slotTransform);
                 newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
                 slot.currentItem = newItem;

@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     [SerializeField] private Camera mainCam;
+    private float shiftSpeed = 2;
     private bool shift = false;
 
     // Update is called once per frame
@@ -47,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (shift)
         {
-            transform.position += direction * (speed * 2) * Time.deltaTime;
+            transform.position += direction * (speed * shiftSpeed) * Time.deltaTime;
         }
     }
 
