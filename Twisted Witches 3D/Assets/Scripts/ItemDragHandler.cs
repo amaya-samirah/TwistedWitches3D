@@ -8,14 +8,18 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public float minDropDistance = 1f;
     public float maxDropDistance = 2f;  // far enough away as not to accidentally pick back up
+    public GameObject itemDictionaryObject;
     
     private InventoryController inventoryController;
+    private Item3DDictionary itemDictionary;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
         inventoryController = InventoryController.Instance;
+        itemDictionary = FindAnyObjectByType<Item3DDictionary>();
+        //itemDictionary = itemDictionaryObject.GetComponent<Item3DDictionary>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -103,6 +107,7 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
         else  // if no slot under where dragged to
         {
+            Debug.Log("No slot found");
             // Drop item outside of inventory
             if (!IsWithinInventory(eventData.position))
             {
@@ -130,7 +135,8 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     void DropItem(Slot originalSlot)
     {
         // Drop items 1 by 1 from stack
-        Item item = GetComponent<Item>();
+        GameObject item3D = itemDictionary.GetItemPrefab(gameObject.GetComponent<Item>().ID);
+        Item item = item3D.GetComponent<Item>();
         int quantity = item.quantity;
 
         if (quantity > 1)
@@ -156,8 +162,8 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             return;
         }
         // Random drop position near player
-        Vector2 dropOffset = Random.insideUnitCircle.normalized * Random.Range(minDropDistance, maxDropDistance);  // drops randomly in cirle around player
-        Vector2 dropPosition = (Vector2)playerTransform.position + dropOffset;  // player.transform is actually a Vector3
+        Vector3 dropOffset = Random.insideUnitCircle.normalized * Random.Range(minDropDistance, maxDropDistance);  // drops randomly in cirle around player
+        Vector3 dropPosition = playerTransform.position + new Vector3(-Random.Range(minDropDistance, maxDropDistance), -0.5f, 0);  // player.transform is actually a Vector3
 
         // Instantiate drop item
         GameObject dropItem = Instantiate(gameObject, dropPosition, Quaternion.identity);  // Quaternion.identity means will have normal rotation
@@ -175,7 +181,7 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     }
 
-    // If right clikc on stack it'll split and move to another slot
+    // If right click on stack it'll split and move to another slot
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Right)

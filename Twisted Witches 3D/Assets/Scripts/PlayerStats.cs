@@ -51,7 +51,7 @@ public class PlayerStats : MonoBehaviour
     // Increasing health
     public void IncreaseCurrHealth(float amount = 1f)
     {
-        float newHealth = currHealth - amount;
+        float newHealth = currHealth + amount;
 
         // Check health not full
         if (newHealth == fullHealth)

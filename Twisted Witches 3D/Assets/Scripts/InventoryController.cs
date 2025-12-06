@@ -86,6 +86,7 @@ public class InventoryController : MonoBehaviour
 
     public bool AddItem(GameObject itemPrefab3D)
     {
+        GameObject item3DDictionaryObject = itemPrefab3D.GetComponent<ItemDragHandler>().itemDictionaryObject;
         int itemID = itemPrefab3D.GetComponent<Item>().ID;
         Item itemToAdd = itemDictionary.GetItemPrefab(itemID).GetComponent<Item>();
         GameObject itemPrefab2D = itemDictionary.GetItemPrefab(itemID);
@@ -144,6 +145,7 @@ public class InventoryController : MonoBehaviour
                 slot.currentItem = newItem;
                 Debug.Log("Added to hotbar.");
 
+                newItem.GetComponent<ItemDragHandler>().itemDictionaryObject = item3DDictionaryObject;
                 RebuildItemCounts();
                 return true;
             }
@@ -160,6 +162,7 @@ public class InventoryController : MonoBehaviour
 
                 slot.currentItem = newItem;
 
+                newItem.GetComponent<ItemDragHandler>().itemDictionaryObject = item3DDictionaryObject;
                 RebuildItemCounts();
                 return true;
             }

@@ -2,17 +2,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // INDEX
-// 1 - Item
-// 2 - Health Potion
+// 0 - Item
+// 1 - Health Potion
+// 2 - Apple
 // 3 - Donut
-// 4 - Speed Potion
-// 5 - Apple
-// 6 - Mushroom
-// 7 - Pumpkin
-// 8 - Candy
-// 9 - Sunflower
-// 10 - Magic Energy Potion
-// 11 - Wand
+// 4 - Candy
+// 5 - Mushroom
+// 6 - Pumpkin
+// 7 - Sunflower
+// 8 - Purple Wand
+// 9 - Magic Energy Potion
+// 10 - Speed Potion
 
 public class ItemDictionary : MonoBehaviour
 {

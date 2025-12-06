@@ -189,6 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6067389833890303416}
   - component: {fileID: 397432965811504032}
+  - component: {fileID: 5956470693503988235}
   - component: {fileID: 8382555830292755938}
   - component: {fileID: 8420075022144480295}
   - component: {fileID: 6312176004248313877}
@@ -208,7 +209,7 @@ RectTransform:
   m_GameObject: {fileID: 5809896077309034075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 89.37}
-  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3270261712644749186}
@@ -233,13 +234,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   ID: 1
-  Name: HealthPotion
+  Name: Health Potion
   quantity: 1
   removeAfter: 1
   hasDuration: 0
   duration: 0
   itemIcon: {fileID: -1142104737921251195, guid: c3db3a3429e2048a29ac03d68e53b480, type: 3}
   player: {fileID: 0}
+--- !u!114 &5956470693503988235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809896077309034075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91442e1b77a7c4740a5bd8815002e293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Potion
+  ID: 0
+  Name: Health
+  ingredients:
+  - {fileID: 8886246744717982130, guid: ea2683018822c4f759e3501e884b9c7f, type: 3}
+  - {fileID: 7097828640168159240, guid: dd322f63a1b744f40b2080972594c5ee, type: 3}
+  - {fileID: 8369114630620104727, guid: 4eef064c4eaf04438ba995d0b2dcbabf, type: 3}
+  IngredientsInCauldronCount: 0
+  cookTime: 15
 --- !u!114 &8382555830292755938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   minDropDistance: 1
   maxDropDistance: 1.5
+  itemDictionaryObject: {fileID: 0}
 --- !u!136 &6312176004248313877
 CapsuleCollider:
   m_ObjectHideFlags: 0
