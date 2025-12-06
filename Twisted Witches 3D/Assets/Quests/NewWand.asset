@@ -28,5 +28,8 @@ MonoBehaviour:
     rewardID: 0
     amount: -100
   - type: 0
-    rewardID: 11
+    rewardID: 8
     amount: 1
+  - type: 2
+    rewardID: 0
+    amount: 300

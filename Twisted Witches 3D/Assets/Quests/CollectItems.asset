@@ -17,34 +17,34 @@ MonoBehaviour:
   description: Your evil clone has stolen Hodor's items. Collect all 5 of them in
     the Dark Forest, and return them to Hodor.
   objectives:
-  - objectiveID: 5
+  - objectiveID: 2
     description: Collect 1 Apple
     type: 0
     requiredAmount: 1
     currentAmount: 0
-  - objectiveID: 6
+  - objectiveID: 5
     description: Collect 1 Mushroom
     type: 0
     requiredAmount: 1
     currentAmount: 0
-  - objectiveID: 7
+  - objectiveID: 6
     description: Collect 1 Pumpkin
     type: 0
     requiredAmount: 1
     currentAmount: 0
-  - objectiveID: 8
+  - objectiveID: 4
     description: Collect 1 Candy
     type: 0
     requiredAmount: 1
     currentAmount: 0
-  - objectiveID: 9
+  - objectiveID: 7
     description: Collect 1 Sunflower
     type: 0
     requiredAmount: 1
     currentAmount: 0
   questRewards:
   - type: 0
-    rewardID: 2
+    rewardID: 1
     amount: 1
   - type: 2
     rewardID: 0

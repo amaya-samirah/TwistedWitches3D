@@ -16,7 +16,7 @@ MonoBehaviour:
   npcPortrait: {fileID: 1327522395151423198, guid: 8322687fc004f4a2eb9f89c4bac489f7, type: 3}
   dialogueLines:
   - Hey there sugar!
-  autoProgressLines: 00
+  autoProgressLines: 01
   endDialogeLines: 01
   typingSpeed: 0.055
   voiceSound: {fileID: 8300000, guid: 3185541442f55487bb1ddabb99e5ce13, type: 3}
