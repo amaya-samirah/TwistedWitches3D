@@ -57,7 +57,7 @@ public class InventoryController : MonoBehaviour
                 if (item != null)
                 {
                     // Adding this item's quantity to any existing one inside cache
-                    itemsCountCache[item.ID] = itemsCountCache.GetValueOrDefault(item.ID, 0) + item.quantity;
+                    itemsCountCache[item.ID-1] = itemsCountCache.GetValueOrDefault(item.ID-1, 0) + item.quantity;
                 }
             }
         }
@@ -247,6 +247,8 @@ public class InventoryController : MonoBehaviour
             if (amount <= 0) break;
 
             Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot.currentItem != null)
+            {
             if (slot?.currentItem?.GetComponent<Item>() is Item item && item.ID == itemID)  // if item isn't null grab it and check if ID matches
             {
                 int removed = Mathf.Min(amount, item.quantity);
@@ -260,6 +262,7 @@ public class InventoryController : MonoBehaviour
                     slot.currentItem = null;
                 }
             }
+            }
         }
         
         // Check inventory
@@ -268,6 +271,8 @@ public class InventoryController : MonoBehaviour
             if (amount <= 0) break;
 
             Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot.currentItem != null)
+            {
             if (slot?.currentItem?.GetComponent<Item>() is Item item && item.ID == itemID)  // if item isn't null grab it and check if ID matches
             {
                 int removed = Mathf.Min(amount, item.quantity);
@@ -280,6 +285,7 @@ public class InventoryController : MonoBehaviour
                     Destroy(slot.currentItem);
                     slot.currentItem = null;
                 }
+            }
             }
         }
 

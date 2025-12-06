@@ -31,7 +31,8 @@ public class Item : MonoBehaviour
 
     private void Awake()
     {
-        if (player != null) playerMovement = player.GetComponent<PlayerMovement>();
+        playerMovement = FindAnyObjectByType<PlayerMovement>();
+        //if (player != null) playerMovement = player.GetComponent<PlayerMovement>();
         quantityText = GetComponent<TMP_Text>();
         UpdateQuantityDisplay();
     }
@@ -87,23 +88,25 @@ public class Item : MonoBehaviour
     // Using an item...
     public virtual void UseItem()
     {
+        Debug.Log($"Using item: {Name}...");
         switch (ID)
         {
             case 2:  // health potion
                 PlayerStats.Instance.IncreaseCurrHealth(10);
                 RemoveItem();
                 break;
-            case 4:  // speed potion
+            case 11:  // speed potion
+                
                 if (playerMovement != null)
                 {
                     playerMovement.SpeedPotion();
-                   RemoveItem(); 
+                    RemoveItem(); 
                 }
                 break;
             case 10:  // magic energy potion
                 PlayerStats.Instance.DecreaseCurrMagicEnergy(10);
                 break;
-            case 11:  // wand
+            case 9:  // wand
                 break;
             default:  // food items
                 SoundEffectManager.PlaySFX("Eat");

@@ -67,6 +67,7 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         if (dropSlot != null)  // ended drag on stop of slot
         {
+            Debug.Log("Found dropslot");
             if (dropSlot.currentItem != null)
             {
                 // Check for stack possibility
@@ -100,6 +101,7 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 // Move item into drop slot
                 transform.SetParent(dropSlot.transform);
                 dropSlot.currentItem = gameObject;
+                Debug.Log($"Dropslot item: {dropSlot.currentItem.name}");
 
                 GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
             }
@@ -166,7 +168,7 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         Vector3 dropPosition = playerTransform.position + new Vector3(-Random.Range(minDropDistance, maxDropDistance), -0.5f, 0);  // player.transform is actually a Vector3
 
         // Instantiate drop item
-        GameObject dropItem = Instantiate(gameObject, dropPosition, Quaternion.identity);  // Quaternion.identity means will have normal rotation
+        GameObject dropItem = Instantiate(item3D, dropPosition, Quaternion.identity);  // Quaternion.identity means will have normal rotation
         Item droppedItem = dropItem.GetComponent<Item>();
         droppedItem.quantity = 1;  // only drop 1 item at a time
         dropItem.GetComponent<BounceEffect>().StartBounce();

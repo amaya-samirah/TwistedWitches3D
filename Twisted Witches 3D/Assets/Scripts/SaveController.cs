@@ -49,18 +49,21 @@ public class SaveController : MonoBehaviour
         // playerStatsController = FindAnyObjectByType<PlayerStatsController>();
         // dayStatsController = FindAnyObjectByType<DayStatsController>();
 
-        inventoryController = inventoryObject.GetComponent<InventoryController>();
-        hotbarController = hotbarObject.GetComponent<HotbarController>();
-        playerStatsController = playerStatsObject.GetComponent<PlayerStatsController>();
-        dayStatsController = dayStatsObject.GetComponent<DayStatsController>();
+        if (inventoryController != null) inventoryController = inventoryObject.GetComponent<InventoryController>();
+        if (hotbarController != null) hotbarController = hotbarObject.GetComponent<HotbarController>();
+        if (playerStatsController != null) playerStatsController = playerStatsObject.GetComponent<PlayerStatsController>();
+        if (dayStatsController != null) dayStatsController = dayStatsObject.GetComponent<DayStatsController>();
 
         // Get chests
-        chests = new Chest[chestObjects.Count];
-        for (int i = 0; i < chestObjects.Count; i++)
+        if (chests != null)
         {
-            if (chestObjects[i] != null)
+            chests = new Chest[chestObjects.Count];
+            for (int i = 0; i < chestObjects.Count; i++)
             {
-                chests[i] = chestObjects[i].GetComponent<Chest>();
+                if (chestObjects[i] != null)
+                {
+                    chests[i] = chestObjects[i].GetComponent<Chest>();
+                }
             }
         }
     }

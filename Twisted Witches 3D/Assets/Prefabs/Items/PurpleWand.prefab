@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 5237417248301704055}
   - component: {fileID: 7477621407959777920}
   - component: {fileID: 6524196435588634474}
+  - component: {fileID: -1069008520071993550}
   m_Layer: 0
   m_Name: PurpleWand
   m_TagString: Item
@@ -231,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af215ba0059eb4d8c8e08a07195c0cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  ID: 8
+  ID: 9
   Name: Purple Wand
   quantity: 1
   removeAfter: 0
@@ -292,3 +293,25 @@ CapsuleCollider:
   m_Height: 0.17085445
   m_Direction: 1
   m_Center: {x: -0.0028547645, y: 0.07223146, z: 0}
+--- !u!114 &-1069008520071993550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772882226571106328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb3b7fa4aee64e65adba630550887c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wand
+  ID: 9
+  Name: Purple Wand
+  quantity: 1
+  removeAfter: 0
+  hasDuration: 0
+  duration: 0
+  itemIcon: {fileID: -813724387357801475, guid: c3db3a3429e2048a29ac03d68e53b480, type: 3}
+  player: {fileID: 0}
+  damageAmount: 2
+  durability: 100

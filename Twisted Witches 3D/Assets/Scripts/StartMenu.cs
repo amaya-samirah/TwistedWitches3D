@@ -11,6 +11,12 @@ using UnityEngine.SceneManagement;
 // The main functionality for the Start Menu UI
 public class StartMenu : MonoBehaviour
 {
+    private SaveController saveController;
+    void Awake()
+    {
+        saveController = FindAnyObjectByType<SaveController>();
+    }
+
     // Called by Play button
     public void PlayButton()
     {
@@ -22,6 +28,7 @@ public class StartMenu : MonoBehaviour
     {
         // TODO:
         // - create new game (save controller)
+        saveController.NewGame();
         SceneManager.LoadScene(1);
     }
 

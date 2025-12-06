@@ -1,0 +1,54 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="Cauldron">
+			<method name="CheckSlotsFull"/>
+			<method name="HideCookPage"/>
+		</type>
+		<type fullname="GameStateController">
+			<method name="ReturnToMenu"/>
+			<method name="ReturnToMenu"/>
+			<method name="ReturnToMenu"/>
+			<method name="ReturnToMenu"/>
+			<method name="ReturnToMenu"/>
+			<method name="ReturnToMenu"/>
+		</type>
+		<type fullname="InteractionDetector">
+			<method name="OnInteract"/>
+			<method name="OnInteract"/>
+			<method name="OnInteract"/>
+		</type>
+		<type fullname="SaveController">
+			<method name="QuitGame"/>
+			<method name="QuitGame"/>
+			<method name="QuitGame"/>
+			<method name="SaveAndQuit"/>
+			<method name="SaveAndQuit"/>
+			<method name="SaveAndQuit"/>
+			<method name="SaveGame"/>
+			<method name="SaveGame"/>
+			<method name="SaveGame"/>
+		</type>
+		<type fullname="StartMenu">
+			<method name="NewGameButton"/>
+			<method name="PlayButton"/>
+			<method name="QuitButton"/>
+		</type>
+		<type fullname="TabController">
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+			<method name="ActivateTab"/>
+		</type>
+	</assembly>
+</linker>

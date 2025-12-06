@@ -25,7 +25,7 @@ MonoBehaviour:
   - Goodbye.
   - Be careful of the creatures in the forest!
   - Thank you so much!
-  autoProgressLines: 010101010100000000
+  autoProgressLines: 010101010100010001
   endDialogeLines: 000000000100010101
   typingSpeed: 0.055
   voiceSound: {fileID: 8300000, guid: 3185541442f55487bb1ddabb99e5ce13, type: 3}

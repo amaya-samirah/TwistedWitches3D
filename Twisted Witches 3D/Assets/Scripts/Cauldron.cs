@@ -47,8 +47,13 @@ public class Cauldron : MonoBehaviour, IInteractable
             Slot slot = slots[i].GetComponent<Slot>();
             if (slot.currentItem != null)
             {
+                Debug.Log($"Item in slot {i}: {slot.currentItem.name}");
                 IngredientsInCauldron.Add(slot.currentItem.GetComponent<Item>());
                 count++;
+            } 
+            else
+            {
+                Debug.Log($"No item in slot {i}");
             }
         }
 
@@ -127,14 +132,14 @@ public class Cauldron : MonoBehaviour, IInteractable
     private IEnumerator BrewPotion(Item potion)
     {
         inUse = true;
-        animator.SetBool("inUse", true);
+        //animator.SetBool("inUse", true);
         yield return new WaitForSeconds(potion.GetComponent<Potion>().cookTime);
         inUse = false;
-        animator.SetBool("inUse", false);
+        //animator.SetBool("inUse", false);
 
         // Drop item
         SoundEffectManager.PlaySFX("PotionMade");
-        GameObject droppedItem = Instantiate(potion.gameObject, transform.position + Vector3.down, Quaternion.identity);
+        GameObject droppedItem = Instantiate(potion.gameObject, transform.position + new Vector3(0, 0.15f, -0.5f), Quaternion.identity);
         droppedItem.GetComponent<BounceEffect>().StartBounce();
     }
 }

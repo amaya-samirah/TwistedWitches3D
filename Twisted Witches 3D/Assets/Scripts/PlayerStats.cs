@@ -88,6 +88,7 @@ public class PlayerStats : MonoBehaviour
             canCastSpells = false;
         }
 
+        currMagicEnergy = newEngergy;
         playerStatsController.UpdateStatsUI();
     }
 

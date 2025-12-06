@@ -60,6 +60,8 @@ public class Slime : MonoBehaviour, IInteractable
             return;
         }
 
+        Debug.Log("Can interact with slime");
+
         int damage = 3;
         if (health - damage <= 0)
         {
