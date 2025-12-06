@@ -1,5 +1,5 @@
 # TwistedWitches
-Private repository for CSCE 552.
+Repository for CSCE 552.
 
 To download the build...
 - Open the realeases tab on the right.
