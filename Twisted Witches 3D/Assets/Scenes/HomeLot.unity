@@ -6244,6 +6244,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 243094525754130148, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1321504416}
+    - target: {fileID: 243094525754130148, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnToMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 859120961740040767, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -6539,6 +6547,14 @@ PrefabInstance:
     - target: {fileID: 7579081417262657544, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CheckSlotsFull
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614133584389283456, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1321504416}
+    - target: {fileID: 7614133584389283456, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnToMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8575346015011355955, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
       propertyPath: m_IsActive
