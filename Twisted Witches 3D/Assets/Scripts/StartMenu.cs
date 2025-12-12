@@ -11,7 +11,9 @@ using UnityEngine.SceneManagement;
 // The main functionality for the Start Menu UI
 public class StartMenu : MonoBehaviour
 {
+    public GameObject aboutPanel;
     private SaveController saveController;
+
     void Awake()
     {
         saveController = FindAnyObjectByType<SaveController>();
@@ -36,5 +38,17 @@ public class StartMenu : MonoBehaviour
     public void QuitButton()
     {
         Application.Quit();
+    }
+
+    // Called by About button
+    public void AboutButton()
+    {
+        aboutPanel.SetActive(true);
+    }
+
+    // Called by close button on about panel
+    public void CloseButton()
+    {
+        aboutPanel.SetActive(false);
     }
 }
