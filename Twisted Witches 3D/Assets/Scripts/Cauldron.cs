@@ -8,14 +8,15 @@ public class Cauldron : MonoBehaviour, IInteractable
     public GameObject[] slots;
     public GameObject potionDictionary;
     public bool inUse { get; private set; }
+    public Animator animator;
+
     private List<Item> IngredientsInCauldron;
     private int slotCount = 3;
-    private Animator animator;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
+        //animator = gameObject.GetComponent<Animator>();
         IngredientsInCauldron = new List<Item>();
     }
 
@@ -132,10 +133,10 @@ public class Cauldron : MonoBehaviour, IInteractable
     private IEnumerator BrewPotion(Item potion)
     {
         inUse = true;
-        //animator.SetBool("inUse", true);
+        animator.SetBool("cooking", true);
         yield return new WaitForSeconds(potion.GetComponent<Potion>().cookTime);
         inUse = false;
-        //animator.SetBool("inUse", false);
+        animator.SetBool("cooking", false);
 
         // Drop item
         SoundEffectManager.PlaySFX("PotionMade");
