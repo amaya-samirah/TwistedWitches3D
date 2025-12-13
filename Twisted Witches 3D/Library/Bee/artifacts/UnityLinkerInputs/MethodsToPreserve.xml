@@ -22,7 +22,13 @@
 		</type>
 		<type fullname="SaveController">
 			<method name="QuitGame"/>
+			<method name="QuitGame"/>
+			<method name="QuitGame"/>
 			<method name="SaveAndQuit"/>
+			<method name="SaveAndQuit"/>
+			<method name="SaveAndQuit"/>
+			<method name="SaveGame"/>
+			<method name="SaveGame"/>
 			<method name="SaveGame"/>
 		</type>
 		<type fullname="StartMenu">

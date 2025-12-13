@@ -211,6 +211,15 @@ ScriptsOnlyBuild:
     fullTypeName: Cauldron
     methodName: HideCookPage
   - assembly: Assembly-CSharp
+    fullTypeName: SaveController
+    methodName: QuitGame
+  - assembly: Assembly-CSharp
+    fullTypeName: SaveController
+    methodName: SaveAndQuit
+  - assembly: Assembly-CSharp
+    fullTypeName: SaveController
+    methodName: SaveGame
+  - assembly: Assembly-CSharp
     fullTypeName: TabController
     methodName: ActivateTab
   - assembly: Assembly-CSharp
@@ -237,6 +246,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: DialogueController
     methodName: ShowDialogueUI
+  - assembly: Assembly-CSharp
+    fullTypeName: SaveController
+    methodName: QuitGame
+  - assembly: Assembly-CSharp
+    fullTypeName: SaveController
+    methodName: SaveAndQuit
+  - assembly: Assembly-CSharp
+    fullTypeName: SaveController
+    methodName: SaveGame
   - assembly: Assembly-CSharp
     fullTypeName: TabController
     methodName: ActivateTab
@@ -3116,4 +3134,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Home.unity
   - Assets/Scenes/Town.unity
   - Assets/Scenes/DarkForest.unity
-  playerPath: /Users/Miyah_Queen645/Desktop/Twisted Witches 3D Build (Mac).app
+  playerPath: /Users/Miyah_Queen645/Desktop/Twisted Witches 3D (Mac).app
