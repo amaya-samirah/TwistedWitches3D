@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VanderDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Vander
-  npcPortrait: {fileID: 2444985694120102399, guid: e3c0675d532bc4ecf9b10625644d9d5c, type: 3}
+  npcPortrait: {fileID: -796752548, guid: cefc84be3a1f54870a45a5235b93d570, type: 3}
   dialogueLines:
   - How's it going!
   - Would you like to purchase a magical item?
