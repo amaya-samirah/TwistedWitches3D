@@ -3,7 +3,7 @@ Repository for CSCE 552.
 
 To download the build...
 - Open the realeases tab on the right.
-- Download the release corresponding to your OS (i.e. Mac or Windows)
+- Download the **Version 2** release corresponding to your OS (i.e. Mac or Windows)
 
 VIDEO DEMO
 
