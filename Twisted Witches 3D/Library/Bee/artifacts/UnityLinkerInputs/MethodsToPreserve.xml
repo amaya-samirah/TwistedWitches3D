@@ -4,6 +4,9 @@
 			<method name="CheckSlotsFull"/>
 			<method name="HideCookPage"/>
 		</type>
+		<type fullname="DialogueController">
+			<method name="ShowDialogueUI"/>
+		</type>
 		<type fullname="GameStateController">
 			<method name="ReturnToMenu"/>
 			<method name="ReturnToMenu"/>
@@ -19,16 +22,12 @@
 		</type>
 		<type fullname="SaveController">
 			<method name="QuitGame"/>
-			<method name="QuitGame"/>
-			<method name="QuitGame"/>
 			<method name="SaveAndQuit"/>
-			<method name="SaveAndQuit"/>
-			<method name="SaveAndQuit"/>
-			<method name="SaveGame"/>
-			<method name="SaveGame"/>
 			<method name="SaveGame"/>
 		</type>
 		<type fullname="StartMenu">
+			<method name="AboutButton"/>
+			<method name="CloseButton"/>
 			<method name="NewGameButton"/>
 			<method name="PlayButton"/>
 			<method name="QuitButton"/>

@@ -1476,7 +1476,7 @@ Transform:
   m_GameObject: {fileID: 550894117}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11333147, y: 0.45293903, z: 0.23335773}
+  m_LocalPosition: {x: -0.11333147, y: 0.4, z: 0.23335773}
   m_LocalScale: {x: 6.666666, y: 6.666666, z: 6.666666}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6082,6 +6082,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HideCookPage
       objectReference: {fileID: 0}
+    - target: {fileID: 1152077096217619582, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1321504415}
+    - target: {fileID: 1152077096217619582, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveAndQuit
+      objectReference: {fileID: 0}
     - target: {fileID: 1298330477948220067, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -6149,6 +6157,14 @@ PrefabInstance:
     - target: {fileID: 3727095224702842785, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3850973237319505881, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1321504415}
+    - target: {fileID: 3850973237319505881, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
       objectReference: {fileID: 0}
     - target: {fileID: 3891669219632327617, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
       propertyPath: m_Pivot.x
@@ -6361,6 +6377,14 @@ PrefabInstance:
     - target: {fileID: 7614133584389283456, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ReturnToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689922263023813142, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1321504415}
+    - target: {fileID: 7689922263023813142, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveGame
       objectReference: {fileID: 0}
     - target: {fileID: 8575346015011355955, guid: 7f9c25825ddf04c2eac5470cece04a62, type: 3}
       propertyPath: m_IsActive

@@ -134,6 +134,9 @@
 		<type fullname="UnityEngine.Tilemaps.TilemapRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.Transform" preserve="nothing"/>
 	</assembly>
+	<assembly fullname="UnityEngine.TilemapModule">
+		<type fullname="UnityEngine.Tilemaps.Tile" preserve="nothing"/>
+	</assembly>
 	<assembly fullname="UnityEngine.UI">
 		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>
 		<type fullname="UnityEngine.EventSystems.EventTrigger" preserve="nothing"/>

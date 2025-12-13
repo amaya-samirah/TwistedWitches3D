@@ -1247,6 +1247,13 @@
             ]
         },
         {
+            "managedAssemblyName": "UnityEngine.TilemapModule.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Tilemaps.Tile",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Tilemap",
             "fullManagedTypeName": "UnityEngine.Tilemaps.Tilemap",
